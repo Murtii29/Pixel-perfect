@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+:root{
+    --biru: #3D8BFD;
+    --biruTurun: #9EC5FE;
+    --putih: #F8FAFC;
+    --hitamFont: #0B1419;
+    --blueGrey: #7591A0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--putih);
+}
+
+  /* navbar */
+nav {
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background: var(--biru);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+nav .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 90%;
+  margin: auto;
+}
+
+nav .navbar .logo a {
+  color: var(--putih);
+  font-size: 27px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav .navbar .menu {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navbar .menu li {
+  list-style: none;
+  margin: 0 15px;
+  position: relative;
+}
+
+.navbar .menu li a {
+  color: var(--putih);
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.navbar .menu li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  left: 0;
+  background: var(--putih);
+  transition: width 0.3s ease;
+}
+
+.navbar .menu li a:hover::after {
+  width: 100%;
+}
+
+nav .navbar .profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.back-button {
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+
+.back-button a img {
+    height: 50px;
+}
+
+.profile-card {
+    background-color: var(--biru);
+    padding: 1px 20px 70px;
+    border-radius: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.profile-card .profile-picture img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: -50px;
+    border: 7px solid var(--putih);
+}
+
+.profile-card h2 {
+    margin-top: 20px;
+    color: var(--putih);
+}
+
+.profile-card p {
+    color: var(--putih);
+    margin: 20px 0;
+}
+
+.profile-card button {
+    background-color: var(--putih);
+    border: none;
+    color: var(--hitamFont);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
